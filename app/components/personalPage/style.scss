@@ -1,0 +1,28 @@
+@import "../../static/css/cal";
+#person-area{
+  width: 100%;
+  background: url("../../static/img/mall/hybg_01.jpg") center center /cover;
+  height: rem(600);
+  overflow: hidden;
+  .head-portrait{
+    float: left;
+    width: rem(130);
+    height: rem(130);
+    border: rem(5) solid green;
+    border-radius: 50%;
+    margin-top: rem(100);
+    margin-left: rem(20);
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .name{
+    float: left;
+    margin-left: rem(50);
+    color: green;
+    margin-top: rem(150);
+    @include font-dpr(15);
+  }
+}
