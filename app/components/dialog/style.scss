@@ -1,0 +1,59 @@
+@import '../../static/css/cal';
+
+.mask{
+  @include font-dpr(15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+  .menu{
+    display: inline-block;
+    position: relative;
+    background: none;
+    .close-btn{
+      height: rem(42);
+      position: absolute;
+      right: 2.5%;
+      top: rem(20);
+      &:active{
+        background-color: rgba($black,.5);
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0,0,0,0);
+  }
+
+  to {
+    background-color: rgba(0,0,0,0.7);
+  }
+}
+
+.fadeIn {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInUp {
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-name: slideInUp;
+}

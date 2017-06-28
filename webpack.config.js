@@ -27,7 +27,7 @@ module.exports = {
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
             { test: /\.scss/, exclude: /node_modules/, loader: 'style!css!postcss!sass' },
             { test: /\.css$/, exclude: /node_modules/, loader: 'style!css!postcss' },
-            { test:/\.(png|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=8192&name=./[name].[ext]?[hash]' },  // 限制大小5kb
+            { test:/\.(png|svg|gif|jpg|jpeg|bmp)$/i, loader:'url-loader?limit=8192&name=./[name].[ext]?[hash]' },  // 限制大小5kb
             // { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000'} // 限制大小小于5k
         ]
     },
@@ -64,7 +64,7 @@ module.exports = {
     // koa 代码在 ./mock 目录中，启动命令为 npm run mock
     devServer: {
         proxy: {
-          '/api': {
+          '/h5': {
             target: {
                 host: 'localhost',
                 protocol: 'http:',

@@ -1,9 +1,10 @@
+$black: #575757;
 $base-size: 64;
 @function rem($font-size){
   @return $font-size / $base-size * 1rem;
 }
-@mixin font-dpr($font-size){
-  font-weight: 400;
+@mixin font-dpr($font-size,$font-weight: 400){
+  font-weight: $font-weight;
   font-size: $font-size+px;
   [data-dpr="2"] & {
     font-size: $font-size * 2px;

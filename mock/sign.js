@@ -1,0 +1,1 @@
+module.exports  = {"is_check":1,"cont_days":2,"detail":[{"is_check":1,"day":1,"score":2},{"is_check":1,"day":2,"score":2},{"day":3,"score":4},{"day":4,"score":4},{"day":5,"score":6},{"day":6,"score":6},{"day":7,"score":6},{"day":8,"score":2},{"day":9,"score":2},{"day":10,"score":4},{"day":11,"score":4},{"day":12,"score":6}]}

@@ -1,0 +1,29 @@
+@import './cal';
+$red: rgb(248,62,30);
+ul,li,ol{
+  list-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+input,button{
+  border: none;
+  outline: none;
+}
+.default-btn{
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  padding: rem(10) 0;
+  background-color: $red;
+  border-radius: rem(5);
+  width: 95%;
+  margin: rem(20) 0;
+  &:active{
+    background-color: rgba($red,.8);
+  }
+}

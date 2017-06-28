@@ -1,0 +1,42 @@
+@import '../../static/css/cal';
+
+#user-info{
+  padding-top: rem(20);
+  background-color: white;
+  text-align: center;
+  .user-ul{
+    border: rem(2) solid #eee;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    padding-left: rem(30);
+    @include font-dpr(15);
+  }
+  h5{
+    @include font-dpr(18);
+    font-weight: 400;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: rem(20);
+  }
+  li{
+    display: flex;
+    flex-direction: row;
+    padding: rem(15) 0;
+    box-sizing: border-box;
+    border-bottom: rem(2) solid #eee;
+    >label{
+      width: rem(170);
+    }
+    >.input-ctr{
+      flex: 1;
+
+    }
+    select.input-ctr{
+      margin-left: rem(-5);
+    }
+  }
+  li:last-child{
+    border-bottom: none;
+  }
+}
