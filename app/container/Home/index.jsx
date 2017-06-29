@@ -4,11 +4,13 @@ import BtnGroup from './btnGroup';
 import DefalutIntroduction from '../../components/Introduction';
 import PersonInfo from '../personInfo';
 import SignInDialog from '../signDialog';
+import RankList from '../rankList';
 import './style.scss';
 import '../../static/css/common.scss';
 import USERSTORE from '../../store';
 import { getUserInfo } from '../../fetch/getUserInfo';
 import Notifications, {notify} from 'react-notify-toast';
+import ScoreDetail from '../scoreDetail';
 import { observer } from 'mobx-react';
 @observer
 export default class Home extends React.PureComponent{
@@ -41,7 +43,8 @@ export default class Home extends React.PureComponent{
     };
     renderNewxArea = () => {
         switch(this.state.nowAdd){
-            case 'RANK': return ;
+            case 'SCOREDETAIL': return <ScoreDetail/>;
+            case 'RANK': return <RankList/>;
             case 'HOME':
             case 'INTRODUCTION':
             default: return <DefalutIntroduction info={this.state.nowAdd}/>;
@@ -71,6 +74,7 @@ export default class Home extends React.PureComponent{
         return (
             <div>
                 <PersonalPage
+                    changeNowAdd={this.changeNowAdd}
                     user={USERSTORE.user}
                     isOK={this.state.isOK}/>
                 <BtnGroup

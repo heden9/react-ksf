@@ -1,6 +1,4 @@
 @import '../../static/css/cal';
-$green: #3faa53;
-$deepGreen: #4d8661;
 #sign-list{
   width: 95%;
   margin: 0 auto;
@@ -13,6 +11,9 @@ $deepGreen: #4d8661;
     top: rem(-50);
     left: 50%;
     transform: translateX(-50%);
+    img{
+      width: rem(500);
+    }
     &::before{
       content: '每日签到';
       position: absolute;

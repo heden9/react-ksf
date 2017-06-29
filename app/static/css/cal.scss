@@ -1,5 +1,7 @@
 $black: #575757;
 $base-size: 64;
+$green: #3faa53;
+$deepGreen: #4d8661;
 @function rem($font-size){
   @return $font-size / $base-size * 1rem;
 }

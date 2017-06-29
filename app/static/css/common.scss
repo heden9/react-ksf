@@ -6,7 +6,7 @@ ul,li,ol{
 *{
   margin: 0;
   padding: 0;
-  font-size: inherit;
+  @include font-dpr(15);
   font-weight: inherit;
   -webkit-font-smoothing: antialiased;
 }
@@ -26,4 +26,15 @@ input,button{
   &:active{
     background-color: rgba($red,.8);
   }
+}
+
+.Ins-title{
+  @include font-dpr(15);
+  padding: rem(10) rem(20);
+}
+
+.noMore{
+  text-align: center;
+  color: #aaa;
+  @include font-dpr(13);
 }

@@ -1,0 +1,55 @@
+@import '../../static/css/cal';
+
+$imgwidth: 130;
+$borderGreen: #3A7C17;
+#rank-menu{
+  padding: rem(15);
+  .rank-item{
+    border-radius: rem(10);
+    margin-bottom: rem(15);
+    border: rem(2) solid $borderGreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(15);
+    @include font-dpr(14);
+    .nickname{
+      flex: 1;
+      text-indent: rem(20);
+    }
+    .score{
+      color: #ff901c;
+    }
+    .head-portrait{
+      position: relative;
+      img{
+        width: rem($imgwidth);
+        height: rem($imgwidth);
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+      .rank-icon{
+        border-radius: rem(50);
+        text-align: center;
+        background-size: cover;
+        height: rem(40);
+        font-style: normal;
+        line-height: rem(40);
+        padding: 0 rem(5);
+        min-width: rem(40);
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        right: 0;
+        &aa{
+          background-image: url("../../static/img/mall/rank_icon.png");
+        }
+        &bb{
+          border: rem(1) solid #aaa;
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}

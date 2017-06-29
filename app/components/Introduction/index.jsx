@@ -4,7 +4,7 @@ export default function defaultIntroduction (props){
     return (
         <div className="Introduction">
             <div>
-                <h5>{props.info === 'HOME' ? '积分奖励计划：': '积分说明：'}</h5>
+                <p className="Ins-title">{props.info === 'HOME' ? '积分奖励计划：': '积分说明：'}</p>
                 <ul>
                     <li>1、新会员首次关注公众号送30积分（取消后重新关注不再送）。</li>
                     <li>2、签到送积分：每日1次签到机会，可赚3积分；</li>
