@@ -1,7 +1,7 @@
 import React from 'react';
 import Dialog from '../../components/dialog';
 import './style.scss';
-import loadingImg from '../../static/img/loading.svg';
+import LoadIcon from '../../components/load';
 import { signIn } from '../../fetch/sign/sign';
 import USERSTORE from '../../store';
 import SignDetail from '../../components/signDetail';
@@ -47,7 +47,7 @@ export default class signDialog extends React.PureComponent{
                 {
                     this.state.isOK ?
                         <SignDetail data={USERSTORE.signInfo}/>:
-                        <img src={loadingImg} alt=""/>
+                        <LoadIcon/>
                 }
             </Dialog>
         )

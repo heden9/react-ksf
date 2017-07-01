@@ -1,0 +1,24 @@
+@import '../../static/css/cal';
+#luck-container{
+  width: 100%;
+  background-color: #7f2789;
+  height: 100%;
+  #luck-head{
+    width: 100%;
+    height: rem(310);
+    background: url('../../static/img/luck/logo_0415@2x.png') center center/cover;
+  }
+  #luck-content{
+    width: fit-content;
+    margin: auto;
+    .luck-dec-area{
+      >p{@include font-dpr(10);}
+      color: #e2bfe0;
+    }
+    a{
+      @include font-dpr(10);
+      text-decoration: underline;
+      color: #d9a923;
+    }
+  }
+}

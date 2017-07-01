@@ -1,12 +1,12 @@
 @import '../../static/css/cal';
 
 .Introduction{
-  @include font-dpr(15);
   padding: 0 rem(30);
   .Ins-title{
     margin-bottom: rem(10);
   }
   li{
+    @include font-dpr(13);
     margin-bottom: rem(15);
     color: $black;
   }

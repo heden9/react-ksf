@@ -24,8 +24,10 @@ export default class btnGroup extends React.PureComponent{
                         <h5>积分排名</h5>
                     </li>
                     <li>
-                        <img src={require("../../../static/img/mall/bg_12.png")} alt=""/>
-                        <h5>积分抽奖</h5>
+                        <Link to="/luck">
+                            <img src={require("../../../static/img/mall/bg_12.png")} alt=""/>
+                            <h5>积分抽奖</h5>
+                        </Link>
                     </li>
                     <li>
                         <img src={require("../../../static/img/mall/bg_13.png")} alt=""/>

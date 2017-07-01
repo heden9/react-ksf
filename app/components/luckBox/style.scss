@@ -1,0 +1,22 @@
+@import '../../static/css/cal';
+.luck-box{
+  margin: 0 auto;
+  width: rem(490);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .luck-btn{
+    width: rem(250);
+    height: rem(255);
+  }
+  .box-item{
+    width: rem(120);
+    height: rem(120);
+    background: #cb1573;
+    border-bottom: rem(10) solid #a3115c;
+    &.active{
+      background: #ff901c;
+    }
+  }
+}

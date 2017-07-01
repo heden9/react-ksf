@@ -1,19 +1,64 @@
 @import '../../static/css/cal';
+$ItemHeight: rem(50);
+$offset: rem(140);
 #score-menu{
-  .create-time{
-    width: rem(200);
+  margin: rem(20);
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: $ItemHeight / 2;
+    left: $offset;
+    width: rem(2);
+    bottom: 0;
+    background-color: $green;
   }
   .score-menu-item{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: rem(10) 0;
+    position: relative;
+    .line{
+      width: rem(50);
+      height: rem(1);
+      background-color: $green;
+      position: absolute;
+      top: $ItemHeight / 2;
+      left: $offset;
+      z-index: -1;
+    }
+    &::after{
+      content: "";
+      top: 50%;
+      border-radius: 50%;
+      width: rem(8);
+      height: rem(8);
+      background-color: $green;
+      position: absolute;
+      transform: translateX(rem(-3)) translateY(rem(-3));
+      left: $offset;
+    }
+    .create-time{
+      @include font-dpr(13);
+      width: rem(180);
+    }
     .green-box{
+      box-sizing: border-box;
+      height: $ItemHeight;
       flex: 1;
       border-radius: rem(20);
       background-color: white;
-      padding: rem(5);
+      padding: rem(5) rem(10);
       border: rem(1) solid $green;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .score-change{
+        color: #ff9616;
+      }
     }
   }
 }

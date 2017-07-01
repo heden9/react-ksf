@@ -14,9 +14,9 @@ export default class scoreDetail extends React.PureComponent{
         }
     }
     componentDidMount(){
-        this.getScoreDetail();
+        this.getDetail();
     }
-    getScoreDetail = () => {
+    getDetail = () => {
         this.setState({
             isOK: false
         });
@@ -44,7 +44,7 @@ export default class scoreDetail extends React.PureComponent{
                 {
                     this.state.hasMore ?
                         <LoadMore
-                            // getInfo={this.getScoreDetail}
+                            getInfo={this.getDetail}
                             isOK={this.state.isOK}/>:
                         <p className="noMore">没有更多数据了</p>
                 }

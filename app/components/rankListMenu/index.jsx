@@ -7,7 +7,7 @@ export default class rankListMenu extends React.PureComponent{
                 {
                     this.props.listInfo.map((item, index) => {
                         return (
-                            <Item key={item.nickname} data={item} index={index+1}/>
+                            <Item key={index} data={item} index={index+1}/>
                         )
                     })
                 }

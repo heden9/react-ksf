@@ -27,7 +27,6 @@ export default class rankList extends React.PureComponent{
             .then((json)=>{
                 if(json == null)
                     return;
-                console.log(json);
                 const hasMore = json.length >= 10 ? true : false;
                 this.setState({
                     rankList: this.state.rankList.concat(json),

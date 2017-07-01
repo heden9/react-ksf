@@ -24,11 +24,11 @@ router.post('/h5/personal', function *(next) {
 var rankList = require('./rank');
 var j = 0;
 router.get('/h5/score/get_top', function *(next) {
-    j++;
-    if(j <= 2)
+    // j++;
+    // if(j <= 2)
         this.body = rankList;
-    else
-        this.body = [];
+    // else
+    //     this.body = [];
 });
 
 //个人资料信息
@@ -46,6 +46,16 @@ router.post('/h5/score/get_detail', function *(next) {
         this.body = scoreDetail;
     // else
     //     this.body = [];
+});
+
+//奖品信息拉取
+var prizeInfo = require('./prize');
+router.get('/h5/wheel/get_info', function *(next) {
+    this.body = prizeInfo;
+});
+//抽奖
+router.post('/h5/wheel/luck', function *(next) {
+    this.body = {id: 6};
 });
 app.use(router.routes())
     .use(router.allowedMethods());

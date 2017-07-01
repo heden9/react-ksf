@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import Drum from '../../static/img/Drum.png';
-import LoadingImg from '../../static/img/loading.svg';
+import LoadIcon from '../../components/load';
 export default class personalPage extends React.PureComponent{
     render(){
         const props = this.props;
@@ -20,12 +20,13 @@ export default class personalPage extends React.PureComponent{
                                   <h5>{props.user.score}</h5>
                                   <h5>我的积分</h5>
                               </div>
-                              <div className="score-level">
+                              <div className="score-level"
+                                   onClick={() => props.changeNowAdd('RANK')}>
                                   <h5>{props.user.myscoretop}</h5>
                                   <h5>积分排名</h5>
                               </div>
                           </div>
-                        : <img src={LoadingImg} alt="" className="loading-icon"/>
+                        : <LoadIcon className='loading-icon'/>
                     }
             </div>
         )

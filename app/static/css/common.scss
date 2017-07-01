@@ -3,10 +3,18 @@ $red: rgb(248,62,30);
 ul,li,ol{
   list-style: none;
 }
+a{
+  color: black;
+  text-decoration: none;
+}
+body,html,#root,#root>div{
+  height: 100%;
+}
 *{
   margin: 0;
   padding: 0;
-  @include font-dpr(15);
+  @include font-dpr(13);
+  font-family: 'Arial';
   font-weight: inherit;
   -webkit-font-smoothing: antialiased;
 }
